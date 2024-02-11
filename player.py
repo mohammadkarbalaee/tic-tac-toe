@@ -34,10 +34,10 @@ class TicTacToeClient:
         pygame.display.set_icon(icon)
         self.bigfont = pygame.font.Font('freesansbold.ttf', 64)
         self.smallfont = pygame.font.Font('freesansbold.ttf', 32)
-        self.backgroundColor = (255, 255, 255)
-        self.titleColor = (0, 0, 0)
+        self.backgroundColor = (0, 0, 0)
+        self.titleColor = (255, 255, 255)
         self.subtitleColor = (128, 0, 255)
-        self.lineColor = (0, 0, 0)
+        self.lineColor = (255, 255, 255)
 
     def build_screen(self):
         self.screen.fill(self.backgroundColor)
@@ -57,7 +57,7 @@ class TicTacToeClient:
         self.center_message(self.bottomMsg, player_color)
 
     def center_message(self, msg, color):
-        pos = (100, 480)
+        pos = (185, 480)
         msg_rendered = self.smallfont.render(msg, True, color)
         self.screen.blit(msg_rendered, pos)
 
